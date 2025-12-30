@@ -18,7 +18,7 @@ export default class ClientesController {
   async show({ params }: HttpContext) {
     const cliente = await Cliente.find(params.id)
     if (!cliente) {
-      throw new Exception('Cliente não encontrado', { status: 404 })
+      throw new Exception('Cliente não encontradooooo', { status: 404 })
     }
     return cliente
   }
