@@ -4,7 +4,7 @@ export default class extends BaseSchema {
   protected tableName = 'horarios_semanas'
 
   async up() {
-    this.schema.createTable(this.tableName, (table) => {
+    this.schema.createTableIfNotExists(this.tableName, (table) => {
       table.increments('id')
       table.integer('dia_semana_numero')
       table.string('dia_semana_texto')
