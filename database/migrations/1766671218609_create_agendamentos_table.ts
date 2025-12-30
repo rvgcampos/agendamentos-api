@@ -4,7 +4,7 @@ export default class extends BaseSchema {
   protected tableName = 'agendamentos'
 
   async up() {
-    this.schema.createTable(this.tableName, (table) => {
+    this.schema.createTableIfNotExists(this.tableName, (table) => {
       table.increments('id').primary()
       table.integer('cliente_id').unsigned().references('id').inTable('clientes').notNullable
       table.date('dia_agendamento').notNullable()
