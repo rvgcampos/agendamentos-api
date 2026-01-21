@@ -2,10 +2,12 @@ import Cliente from '#models/cliente'
 import type { HttpContext } from '@adonisjs/core/http'
 import { createClienteValidator, updateClienteValidator } from '#validators/cliente'
 import { Exception } from '@adonisjs/core/exceptions'
+import db from '@adonisjs/lucid/services/db'
 
 export default class ClientesController {
   async index({}: HttpContext) {
-    return Cliente.all()
+    const clientes = await Cliente.all()
+    return clientes
   }
 
   async store({ request }: HttpContext) {

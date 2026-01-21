@@ -5,8 +5,7 @@
   "type": "module",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "node build/bin/server.js",
-    "start:railway": "node ace:migration run --force && node build/bin/server.js",
+    "start": "node ace build && node build/bin/server.js",
     "build": "node ace build",
     "dev": "node ace serve --hmr",
     "test": "node ace test",
@@ -37,7 +36,7 @@
     "@adonisjs/eslint-config": "^2.0.0",
     "@adonisjs/prettier-config": "^1.4.4",
     "@adonisjs/tsconfig": "^1.4.0",
-    "@japa/api-client": "^3.1.0",
+    "@japa/api-client": "^3.1.1",
     "@japa/assert": "^4.0.1",
     "@japa/plugin-adonisjs": "^4.0.0",
     "@japa/runner": "^4.2.0",
